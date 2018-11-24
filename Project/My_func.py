@@ -56,7 +56,7 @@ def my_spredict_func(station, input_file, output_file):
 
     # Find the latest time point
     time_point = test_data[test_data['hour'] == 0][test_data['min'] == 0].index.tolist()[0]
-    start_point = test_data.iloc[time_point]['Time']
+    start_point = test_data.loc[time_point]['Time']
     observation_period = pd.date_range(start=start_point, periods=96, freq='15T').strftime("%Y-%m-%d %H:%M:%S").tolist()
     test_data = test_data.drop(axis=1, columns=['Time', 'min'])
 
