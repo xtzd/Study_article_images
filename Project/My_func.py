@@ -107,6 +107,7 @@ def my_sspredict_func(station, input_file, output_file):
         my_model = joblib.load('model/' + station + '_model.pkl')
     except:
         print('Need train first!')
+        exit(0)
 
     result = my_model.predict(test_data)
     result = [at_least(x) for x in result]
