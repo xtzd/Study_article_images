@@ -22,7 +22,7 @@ def main():
     elif options.type == 'test':
         if options.length == 'short':
             my_spredict_func(options.station,options.predicate,options.file_name)
-        elif options.length == 'super-short':
+        elif options.length == 'supershort':
             my_sspredict_func(options.station,options.predicate, options.file_name)
 
 
