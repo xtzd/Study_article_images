@@ -73,7 +73,7 @@ def my_spredict_func(station, input_file, output_file):
         exit(0)
 
     result = my_model.predict(test_data)
-    result = [at_least(x) for x in result]
+#     result = [at_least(x) for x in result]
 
     two_columns = ['Time', 'Short Predict']
     result = pd.DataFrame(data={two_columns[0]: observation_period, two_columns[1]: result})
@@ -110,7 +110,7 @@ def my_sspredict_func(station, input_file, output_file):
         exit(0)
 
     result = my_model.predict(test_data)
-    result = [at_least(x) for x in result]
+#     result = [at_least(x) for x in result]
 
     two_columns = ['Time', 'Short Predict']
     result = pd.DataFrame(data={two_columns[0]: observation_period, two_columns[1]: result})
